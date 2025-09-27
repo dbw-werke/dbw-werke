@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>logo-schwarz.png</title>
+  <title>DBW</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,105 +12,67 @@
   <header class="navbar">
     <div class="logo">DBW</div>
     <nav class="menu">
-      <a href="#home">Start</a>
-      <a href="#demo">Demo</a>
-      <a href="#support">Support</a>
+      <a href="#">Home</a>
+      <a href="#">Demo</a>
+      <a href="#">Support</a>
     </nav>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
   <!-- HERO SECTION -->
-  <section id="home" class="hero fade-in">
+  <section class="hero">
     <div class="hero-content">
-      <h1>Reine <span>Performance</span></h1>
-      <p>Erlebe Software-Engineering neu definiert. Wo Präzision auf Innovation trifft, entsteht kompromisslose Exzellenz in jeder Zeile Code.</p>
+      <h1>Pure <span>Performance</span></h1>
+      <p>Experience software engineering redefined. Where precision meets innovation, 
+      delivering uncompromising excellence in every line of code.</p>
       <div class="buttons">
-        <a href="#experience" class="btn primary">Erlebe DBW →</a>
-        <a href="#demo" class="btn secondary">Demo ansehen</a>
+        <a href="#" class="btn primary">Experience DBW →</a>
+        <a href="#" class="btn secondary">Watch Demo</a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 2 -->
-  <section class="black-section slide-up">
-    <h2>Bist du bereit für <span>Perfektion?</span></h2>
-    <p>Schließe dich tausenden Profis an, die mit DBW ihre Arbeitsabläufe auf das nächste Level gebracht haben.  
-    Die Zukunft der Software ist hier.</p>
+  <section class="black-section">
+    <h2>Ready to Experience <span>Perfection?</span></h2>
+    <p>Join thousands of professionals who have elevated their workflow with DBW. 
+    The future of software is here.</p>
     <div class="buttons">
-      <a href="#test" class="btn primary">Kostenlos testen</a>
-      <a href="#demo" class="btn secondary">Demo vereinbaren</a>
-    </div>
-
-    <!-- Bild eingefügt -->
-    <div class="image-container fade-in">
-      <img src="dbw-image.png.png" alt="dbw-image.png.png">
+      <a href="#" class="btn primary">Start Free Trial</a>
+      <a href="#" class="btn secondary">Schedule Demo</a>
     </div>
   </section>
-  <div class="image-container fade-in">
-  <img src="perfektion.png" alt="Perfektion Beispiel">
-</div>
-
 
   <!-- SECTION 3 -->
-  <section class="white-section fade-in">
-    <h2>Leistung</h2>
-    <p>Optimiert für Geschwindigkeit und Effizienz auf jeder Ebene.</p>
+  <section class="white-section">
+    <h2>Performance</h2>
+    <p>Optimized for speed and efficiency at every level.</p>
     <h2>Innovation</h2>
-    <p>Modernste Technologien, die Grenzen überschreiten.</p>
+    <p>Cutting-edge technology that pushes boundaries.</p>
   </section>
 
   <!-- SECTION 4 -->
-  <section class="black-section slide-up" id="experience">
-    <h2>Entwickelt für <span>Exzellenz</span></h2>
-    <p>Jeder Algorithmus optimiert. Jede Oberfläche perfektioniert.  
-    DBW steht für Software-Handwerkskunst auf höchstem Niveau.</p>
+  <section class="black-section">
+    <h2>Engineered for <span>Excellence</span></h2>
+    <p>Every algorithm optimized. Every interface perfected. DBW represents the 
+    pinnacle of software craftsmanship.</p>
     <ul>
-      <li>Antwortzeiten im Mikrosekunden-Bereich</li>
-      <li>Null-Kompromisse bei Sicherheit</li>
-      <li>Intuitive Designsprache</li>
+      <li>Microsecond-level response times</li>
+      <li>Zero-compromise security architecture</li>
+      <li>Intuitive design language</li>
     </ul>
-    <div class="interface-preview">DBW Interface Vorschau</div>
-  </section>
-
-  <!-- VIDEO SECTION -->
-  <section class="white-section fade-in">
-    <h2>DBW in Aktion</h2>
-    <p>Hier kannst du bald unser Produktvideo sehen.</p>
-    <!-- Video-Platzhalter -->
-    <video controls width="80%">
-      <source src="video.mp4" type="video/mp4">
-      Dein Browser unterstützt kein HTML5-Video.
-    </video>
+    <div class="interface-preview">DBW Interface Preview</div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-logo">DBW</div>
     <nav>
-      <a href="#">Datenschutz</a>
-      <a href="#">AGB</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
       <a href="#">Support</a>
     </nav>
-    <p>© 2025 DBW. Mit Präzision entwickelt.</p>
+    <p>© 2025 DBW. Crafted with precision.</p>
   </footer>
-
-  <script>
-    // Mobile Menü
-    function toggleMenu() {
-      document.querySelector('.menu').classList.toggle('active');
-    }
-
-    // Animation beim Scrollen
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
-  </script>
 
 </body>
 </html>
