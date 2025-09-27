@@ -238,4 +238,9 @@ footer p {
   }
 }
 
+section {
+  display: block;
+  width: 100%;
+}
+
 
