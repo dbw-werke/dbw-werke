@@ -5,11 +5,10 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Inter', sans-serif;
-  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
   color: #fff;
+  background: #000;
   line-height: 1.6;
-  scroll-behavior: smooth;
 }
 
 /* HEADER */
@@ -22,26 +21,18 @@ body {
   justify-content: space-between;
   align-items: center;
   background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(5px);
   z-index: 1000;
 }
 .logo {
   font-size: 22px;
-  font-weight: 700;
-}
-.menu {
-  display: flex;
-  gap: 20px;
+  font-weight: bold;
 }
 .menu a {
+  margin-left: 20px;
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
-}
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+  font-size: 14px;
 }
 
 /* HERO */
@@ -51,7 +42,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 120px 20px 60px;
+  padding: 100px 20px 60px;
   background: #fff;
   color: #000;
 }
@@ -60,7 +51,8 @@ body {
   margin-bottom: 20px;
 }
 .hero h1 span {
-  color: #111;
+  color: #000;
+  font-weight: bold;
 }
 .hero p {
   font-size: 18px;
@@ -70,31 +62,22 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
 }
 .btn {
   padding: 12px 25px;
   border-radius: 30px;
-  font-weight: 600;
+  font-weight: bold;
   text-decoration: none;
   font-size: 14px;
-  transition: all 0.3s ease;
 }
 .primary {
   background: #000;
   color: #fff;
 }
-.primary:hover {
-  background: #333;
-}
 .secondary {
   border: 2px solid #000;
   color: #000;
   background: transparent;
-}
-.secondary:hover {
-  background: #000;
-  color: #fff;
 }
 
 /* BLACK SECTION */
@@ -107,6 +90,10 @@ body {
 .black-section h2 {
   font-size: 32px;
   margin-bottom: 20px;
+}
+.black-section h2 span {
+  color: #fff;
+  font-weight: bold;
 }
 .black-section ul {
   list-style: none;
@@ -152,194 +139,3 @@ footer p {
   font-size: 12px;
   color: #666;
 }
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: rgba(0,0,0,0.9);
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  .menu.active {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-  }
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-
-/* ANIMATIONEN */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.slide-up {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
-}
-.slide-up.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Bild mit Rahmen + Spiegelung */
-.image-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.image-container img {
-  width: 60%;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-  animation: fadeInUp 1s ease forwards;
-  position: relative;
-}
-
-/* Spiegelungseffekt */
-.image-container img::after {
-  content: "";
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background-image: inherit;
-  transform: scaleY(-1);
-  opacity: 0.3;
-  filter: blur(2px);
-}
-
-/* Smoothes Fade-In von unten */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-section {
-  display: block;
-  width: 100%;
-}
-
-.image-container img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 40px auto; /* zentriert */
-}
-/* Jede Section wieder blockweise untereinander */
-section {
-  display: block;
-  width: 100%;
-}
-
-/* Bild in Perfektion-Sektion */
-.image-container img {
-  max-width: 80%;
-  height: auto;
-  display: block;
-  margin: 40px auto; /* zentriert */
-  border-radius: 12px; /* runde Ecken */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* schöner Schatten */
-}
-
-/* Bild in der Perfektion-Sektion */
-.image-container img {
-  max-width: 60%;     /* Bildgröße kleiner */
-  height: auto;
-  display: block;
-  margin: 40px auto;  /* zentriert */
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Schatten */
-}
-
-/* Container rechtsbündig */
-.image-container {
-  display: flex;
-  justify-content: flex-end; /* Bild rechts */
-  padding-right: 5%;         /* bisschen Abstand vom Rand */
-}
-
-/* Bild mit Spiegelung und Winkel */
-.image-container img {
-  max-width: 250px; /* kleiner machen */
-  transform: rotate(-5deg); /* leicht angewinkelt */
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  position: relative;
-}
-
-/* Spiegelung */
-.image-container img::after {
-  content: "";
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: url("perfektion.png") no-repeat center;
-  background-size: contain;
-  transform: scaleY(-1);
-  opacity: 0.3;
-  filter: blur(2px);
-}
-
-
-/* Container rechtsbündig */
-.image-container {
-  display: flex;
-  justify-content: flex-end; /* Bild rechts */
-  padding-right: 5%;         /* Abstand vom Rand */
-}
-
-/* Bild */
-.image-container img {
-  max-width: 250px; /* Größe */
-  transform: rotate(-5deg); /* leichter Winkel */
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  position: relative;
-  display: block;
-}
-
-/* Spiegelung */
-.image-container::after {
-  content: "";
-  display: block;
-  width: 250px;
-  height: 100%;
-  background: url("perfektion.png") no-repeat center;
-  background-size: contain;
-  transform: scaleY(-1) rotate(-5deg); /* umgedreht + Winkel */
-  opacity: 0.4;
-  filter: blur(2px);
-  margin-top: -10px; /* näher am Bild */
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); 
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)); /* Safari */
-  margin-right: 5%;
-  align-self: flex-start;
-}
-
-
