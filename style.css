@@ -1,141 +1,111 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  background: #000;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBW</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-/* HEADER */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-}
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-}
-.menu a {
-  margin-left: 20px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">DBW</div>
+    <nav class="menu">
+      <a href="#home">Start</a>
+      <a href="#demo">Demo</a>
+      <a href="#support">Support</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </header>
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 100px 20px 60px;
-  background: #fff;
-  color: #000;
-}
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-.hero h1 span {
-  color: #000;
-  font-weight: bold;
-}
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-.btn {
-  padding: 12px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 14px;
-}
-.primary {
-  background: #000;
-  color: #fff;
-}
-.secondary {
-  border: 2px solid #000;
-  color: #000;
-  background: transparent;
-}
+  <!-- HERO SECTION -->
+  <section id="home" class="hero fade-in">
+    <div class="hero-content">
+      <h1>Reine <span>Performance</span></h1>
+      <p>Erlebe Software-Engineering neu definiert. Wo Präzision auf Innovation trifft, entsteht kompromisslose Exzellenz in jeder Zeile Code.</p>
+      <div class="buttons">
+        <a href="#experience" class="btn primary">Erlebe DBW →</a>
+        <a href="#demo" class="btn secondary">Demo ansehen</a>
+      </div>
+    </div>
+  </section>
 
-/* BLACK SECTION */
-.black-section {
-  padding: 100px 20px;
-  text-align: center;
-  background: #000;
-  color: #fff;
-}
-.black-section h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-.black-section h2 span {
-  color: #fff;
-  font-weight: bold;
-}
-.black-section ul {
-  list-style: none;
-  margin-top: 20px;
-}
-.black-section li {
-  margin: 10px 0;
-}
-.interface-preview {
-  margin-top: 30px;
-  padding: 30px;
-  background: #222;
-  border-radius: 8px;
-}
+  <!-- SECTION 2 -->
+  <section class="black-section slide-up">
+    <h2>Bist du bereit für <span>Perfektion?</span></h2>
+    <p>Schließe dich tausenden Profis an, die mit DBW ihre Arbeitsabläufe auf das nächste Level gebracht haben.  
+    Die Zukunft der Software ist hier.</p>
+    <div class="buttons">
+      <a href="#test" class="btn primary">Kostenlos testen</a>
+      <a href="#demo" class="btn secondary">Demo vereinbaren</a>
+    </div>
+  </section>
 
-/* WHITE SECTION */
-.white-section {
-  padding: 100px 20px;
-  background: #fff;
-  color: #000;
-  text-align: center;
-}
-.white-section h2 {
-  margin: 20px 0 10px;
-}
+  <!-- SECTION 3 -->
+  <section class="white-section fade-in">
+    <h2>Leistung</h2>
+    <p>Optimiert für Geschwindigkeit und Effizienz auf jeder Ebene.</p>
+    <h2>Innovation</h2>
+    <p>Modernste Technologien, die Grenzen überschreiten.</p>
+  </section>
 
-/* FOOTER */
-footer {
-  background: #111;
-  text-align: center;
-  padding: 40px 20px;
-}
-footer nav {
-  margin: 15px 0;
-}
-footer nav a {
-  color: #aaa;
-  margin: 0 10px;
-  font-size: 14px;
-  text-decoration: none;
-}
-footer p {
-  font-size: 12px;
-  color: #666;
-}
+  <!-- SECTION 4 -->
+  <section class="black-section slide-up" id="experience">
+    <h2>Entwickelt für <span>Exzellenz</span></h2>
+    <p>Jeder Algorithmus optimiert. Jede Oberfläche perfektioniert.  
+    DBW steht für Software-Handwerkskunst auf höchstem Niveau.</p>
+    <ul>
+      <li>Antwortzeiten im Mikrosekunden-Bereich</li>
+      <li>Null-Kompromisse bei Sicherheit</li>
+      <li>Intuitive Designsprache</li>
+    </ul>
+    <div class="interface-preview">DBW Interface Vorschau</div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="white-section fade-in">
+    <h2>DBW in Aktion</h2>
+    <p>Hier kannst du bald unser Produktvideo sehen.</p>
+    <!-- Video-Platzhalter -->
+    <video controls width="80%">
+      <source src="assets/video.mp4" type="video/mp4">
+      Dein Browser unterstützt kein HTML5-Video.
+    </video>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">DBW</div>
+    <nav>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+      <a href="#">Support</a>
+    </nav>
+    <p>© 2025 DBW. Mit Präzision entwickelt.</p>
+  </footer>
+
+  <script>
+    // Mobile Menü
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('active');
+    }
+
+    // Animation beim Scrollen
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .slide-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
+
+
