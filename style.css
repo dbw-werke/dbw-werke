@@ -1,0 +1,141 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #000;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.menu a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px 60px;
+  background: #fff;
+  color: #000;
+}
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+.hero h1 span {
+  color: #000;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+.primary {
+  background: #000;
+  color: #fff;
+}
+.secondary {
+  border: 2px solid #000;
+  color: #000;
+  background: transparent;
+}
+
+/* BLACK SECTION */
+.black-section {
+  padding: 100px 20px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+}
+.black-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.black-section h2 span {
+  color: #fff;
+  font-weight: bold;
+}
+.black-section ul {
+  list-style: none;
+  margin-top: 20px;
+}
+.black-section li {
+  margin: 10px 0;
+}
+.interface-preview {
+  margin-top: 30px;
+  padding: 30px;
+  background: #222;
+  border-radius: 8px;
+}
+
+/* WHITE SECTION */
+.white-section {
+  padding: 100px 20px;
+  background: #fff;
+  color: #000;
+  text-align: center;
+}
+.white-section h2 {
+  margin: 20px 0 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  text-align: center;
+  padding: 40px 20px;
+}
+footer nav {
+  margin: 15px 0;
+}
+footer nav a {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+footer p {
+  font-size: 12px;
+  color: #666;
+}
