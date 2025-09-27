@@ -249,5 +249,21 @@ section {
   display: block;
   margin: 40px auto; /* zentriert */
 }
+/* Jede Section wieder blockweise untereinander */
+section {
+  display: block;
+  width: 100%;
+}
+
+/* Bild in Perfektion-Sektion */
+.image-container img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 40px auto; /* zentriert */
+  border-radius: 12px; /* runde Ecken */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* schöner Schatten */
+}
+
 
 
