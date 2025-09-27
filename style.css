@@ -265,5 +265,15 @@ section {
   box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* schöner Schatten */
 }
 
+/* Bild in der Perfektion-Sektion */
+.image-container img {
+  max-width: 60%;     /* Bildgröße kleiner */
+  height: auto;
+  display: block;
+  margin: 40px auto;  /* zentriert */
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5); /* Schatten */
+}
+
 
 
