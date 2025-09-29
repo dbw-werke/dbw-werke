@@ -129,23 +129,24 @@ footer {
 
 /* Responsive Design – Handy & Tablet */
 @media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: row;   /* jetzt nebeneinander */
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  nav a {
-    margin-left: 0;
-    flex: 1;
-    text-align: center;
-  }
-
   header {
     flex-direction: column;
     align-items: center;
     padding:10px 20px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;          /* nebeneinander statt untereinander */
+    justify-content: space-around;/* gleichmäßig verteilen */
+    gap: 0;                       /* kein extra Abstand */
+    width: 100%;
+  }
+
+  nav a {
+    margin: 0;                    /* Links nicht einrücken */
+    flex: 1;                      /* alle gleich breit */
+    text-align: center;           /* Text mittig */
   }
 
   .brand img { height:50px; }
@@ -153,3 +154,4 @@ footer {
   .hero { padding:40px 10px; }
   iframe { width:100% !important; height:auto; }
 }
+
