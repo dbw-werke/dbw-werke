@@ -26,26 +26,26 @@
       color:var(--text);
       line-height:1.6;
       margin:0;
-      padding-top:100px;
+      padding-top:100px; /* Platz für fixierten Header */
       overflow-x:hidden;
     }
 
     .wrap { max-width:var(--maxw); margin:0 auto; padding:20px }
 
-    /* Glass-Effekt Header */
+    /* ---------------- Header mit Glas-Effekt ---------------- */
     header {
       position:fixed;
       top:0;
       left:0;
       width:100%;
-      background:rgba(17,17,17,0.6);
-      backdrop-filter:blur(10px);
+      background:rgba(17,17,17,0.6);   /* halb durchsichtig schwarz */
+      backdrop-filter:blur(10px);      /* Glas-Effekt */
       -webkit-backdrop-filter:blur(10px);
       color:#fff;
       display:flex;
-      justify-content:space-between;
+      justify-content: space-between;  /* Desktop: Logo links, Menü rechts */
       align-items:center;
-      padding:15px 40px;
+      padding:15px 20px;
       border-bottom:1px solid rgba(255,255,255,0.2);
       z-index:1000;
     }
@@ -81,7 +81,6 @@
     }
 
     .hero { text-align:center; padding:80px 20px }
-    .hero img { max-width:100%; border-radius:var(--radius); margin-top:20px }
 
     .card {
       background:#f9f9f9;
@@ -181,26 +180,36 @@
       border-bottom:12px solid transparent;
     }
 
-    /* Responsive Design */
+    /* ---------------- Responsive ---------------- */
     @media (max-width: 768px) {
       header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column;    /* Logo oben, Menü darunter */
+        align-items: center;
         padding:10px 20px;
       }
+
       nav {
-        display: flex;
-        flex-direction: column;
-        gap:10px;
-        margin-top:10px;
+        display:flex;
+        flex-direction: row;       /* Menü nebeneinander */
+        justify-content: space-around;
+        flex-wrap: wrap;           /* falls zu wenig Platz → bricht um */
         width:100%;
+        margin-top:10px;
       }
-      nav a { margin-left:0; }
+
+      nav a {
+        margin:0;
+        flex:1;
+        text-align:center;
+        padding:8px 0;
+      }
+
       .brand img { height:50px; }
       .row { flex-direction: column; }
       .hero { padding:40px 10px; }
       iframe { width:100% !important; height:auto; }
     }
+
     @media (max-width: 500px) {
       h1 { font-size:1.6rem; }
       h2 { font-size:1.3rem; }
@@ -229,7 +238,6 @@
     <section class="hero hidden">
       <h1>Mehr 5-Sterne-Bewertungen. Mehr Kunden.</h1>
       <p>DBW hilft Gewerben, Kundenfeedback automatisch in glänzende Google-Bewertungen zu verwandeln.</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Googlemaps-screenshot.png" alt="Google Maps Beispiel">
     </section>
 
     <!-- Video -->
@@ -278,7 +286,6 @@
       <h2>Erfolgsgeschichten</h2>
       <p>So profitieren unsere Kunden:</p>
       <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/5_stars.svg/1200px-5_stars.svg.png" alt="5 Sterne" style="max-width:200px">
         <p>"Seit wir DBW nutzen, haben wir über 100 neue Bewertungen gesammelt – unser Umsatz ist gestiegen!"</p>
       </div>
     </section>
