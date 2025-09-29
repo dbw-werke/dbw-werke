@@ -130,28 +130,29 @@ footer {
 /* Responsive Design – Handy & Tablet */
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
+    flex-direction: row;    /* Logo links, Menü rechts */
+    justify-content: space-between;
     align-items: center;
-    padding:10px 20px;
+    padding:10px 15px;
   }
 
   nav {
-    display: flex;
-    flex-direction: row;          /* nebeneinander statt untereinander */
-    justify-content: space-around;/* gleichmäßig verteilen */
-    gap: 0;                       /* kein extra Abstand */
-    width: 100%;
+    display:flex;
+    flex-direction: row;       /* Menü nebeneinander */
+    justify-content: flex-end; /* nach rechts ausrichten */
+    flex-wrap: wrap;           /* wenn zu wenig Platz → umbrechen */
+    width:auto;
+    margin-top:0;
   }
 
   nav a {
-    margin: 0;                    /* Links nicht einrücken */
-    flex: 1;                      /* alle gleich breit */
-    text-align: center;           /* Text mittig */
+    margin:0 8px;              /* kleine Abstände */
+    flex:unset;                /* gleiche Breite aufheben */
+    text-align:center;
   }
 
-  .brand img { height:50px; }
+  .brand img { height:45px; }
   .row { flex-direction: column; }
   .hero { padding:40px 10px; }
   iframe { width:100% !important; height:auto; }
 }
-
