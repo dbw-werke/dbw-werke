@@ -38,8 +38,8 @@
       top:0;
       left:0;
       width:100%;
-      background:rgba(17,17,17,0.6); /* halb durchsichtig schwarz */
-      backdrop-filter:blur(10px); /* verschwommen dahinter */
+      background:rgba(17,17,17,0.6);
+      backdrop-filter:blur(10px);
       -webkit-backdrop-filter:blur(10px);
       color:#fff;
       display:flex;
@@ -137,6 +137,69 @@
       opacity:1;
       transform:translateY(0);
     }
+
+    /* Video Preview */
+    .video-preview {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      max-width: 100%;
+    }
+    .video-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .play-button {
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      width:70px;
+      height:70px;
+      background:rgba(255,255,255,0.85);
+      border-radius:50%;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+    .play-button::after {
+      content:"";
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-40%,-50%);
+      border-left:20px solid #e60023;
+      border-top:12px solid transparent;
+      border-bottom:12px solid transparent;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding:10px 20px;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        margin-top:10px;
+        width:100%;
+      }
+      nav a { margin-left:0; }
+      .brand img { height:50px; }
+      .row { flex-direction: column; }
+      .hero { padding:40px 10px; }
+      iframe { width:100% !important; height:auto; }
+    }
+    @media (max-width: 500px) {
+      h1 { font-size:1.6rem; }
+      h2 { font-size:1.3rem; }
+      section { margin:30px 0; }
+    }
   </style>
 </head>
 <body>
@@ -145,7 +208,7 @@
     <!-- Header -->
     <header>
       <a class="brand" href="#">
-        <img src="dbw-log.png" alt="DBW Logo">
+        <img src="logo-weiss.png" alt="DBW Logo">
       </a>
       <nav>
         <a href="#about">Über uns</a>
@@ -165,14 +228,14 @@
 
     <!-- Video -->
     <section class="hero hidden">
-      <h2></h2>
-      <iframe width="800" height="450"
-              src="https://www.youtube.com/embed/ubhSI3ekP5k?rel=0"
-              frameborder="0"
-              allow="autoplay; encrypted-media; picture-in-picture"
-              allowfullscreen
-              style="max-width:100%;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.15)">
-      </iframe>
+      <h2>Unser Video</h2>
+      <div class="video-preview" onclick="loadVideo()">
+        <img src="https://img.youtube.com/vi/ubhSI3ekP5k/maxresdefault.jpg" alt="Video Vorschau">
+        <div class="play-button"></div>
+      </div>
+      <div id="video-container" style="display:none;">
+        <iframe id="ytplayer" frameborder="0" allowfullscreen></iframe>
+      </div>
     </section>
 
     <!-- Über uns -->
@@ -263,8 +326,16 @@
         }
       });
     }, {threshold:0.2});
-
     document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
+
+    // Video laden bei Klick
+    function loadVideo(){
+      document.querySelector('.video-preview').style.display = 'none';
+      let container = document.getElementById('video-container');
+      container.style.display = 'block';
+      document.getElementById('ytplayer').src =
+        "https://www.youtube.com/embed/ubhSI3ekP5k?autoplay=1&rel=0&modestbranding=1";
+    }
   </script>
 </body>
 </html>
