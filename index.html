@@ -1,82 +1,221 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DBW</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DBW – Deutsche Bewertungswerke</title>
+
+  <!-- Smooth Schriftart Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#fff;
+      --text:#111;
+      --muted:#666;
+      --accent:#0066cc;
+      --radius:12px;
+      --maxw:1100px;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0 }
+
+    body {
+      font-family:'Poppins', sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .wrap { max-width:var(--maxw); margin:0 auto; padding:20px }
+
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding-bottom:10px;
+      border-bottom:1px solid #eee;
+    }
+
+    .brand img { height:120px; width:auto; display:block }
+
+    nav a {
+      margin-left:20px;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:500;
+      transition:color 0.2s;
+    }
+    nav a:hover { color:var(--accent) }
+
+    section { margin:60px 0 }
+
+    h1,h2,h3 {
+      margin-bottom:12px;
+      font-weight:600;
+      letter-spacing:0.5px;
+    }
+
+    p {
+      font-weight:300;
+      font-size:1.05rem;
+    }
+
+    .hero { text-align:center; padding:80px 20px }
+    .hero img { max-width:100%; border-radius:var(--radius); margin-top:20px }
+
+    .card {
+      background:#f9f9f9;
+      padding:24px;
+      border-radius:var(--radius);
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
+      margin-top:20px;
+    }
+
+    form input, form button, textarea {
+      width:100%;
+      padding:12px;
+      margin-top:10px;
+      border-radius:var(--radius);
+      border:1px solid #ccc;
+      font-size:1rem;
+      font-family:'Poppins', sans-serif;
+    }
+
+    form button {
+      background:linear-gradient(90deg, var(--accent), #0099ff);
+      color:#fff;
+      border:0;
+      cursor:pointer;
+      font-weight:600;
+      transition:transform 0.2s, background 0.2s;
+    }
+    form button:hover { transform:scale(1.05) }
+
+    footer {
+      text-align:center;
+      padding:20px 0;
+      border-top:1px solid #eee;
+      color:var(--muted);
+      font-size:0.9rem;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    
+    <!-- Header -->
+    <header>
+      <a class="brand" href="#">
+        <img src="logo-schwarz.png" alt="DBW Logo">
+      </a>
+      <nav>
+        <a href="#about">Über uns</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#bewertungen">Bewertungen</a>
+        <a href="#abo">Abo</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
 
-  <!-- HEADER -->
-  <header class="navbar">
-   <div class="logo">
-  <img src="logo-white.png" alt="logo-white.png">
-</div> 
-    <nav class="menu">
-      <a href="#">Home</a>
-      <a href="#">Demo</a>
-      <a href="#">Support</a>
-    </nav>
-  </header>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Mehr 5-Sterne-Bewertungen. Mehr Kunden.</h1>
+      <p>DBW hilft Gewerben, Kundenfeedback automatisch in glänzende Google-Bewertungen zu verwandeln.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Googlemaps-screenshot.png" alt="Google Maps Beispiel">
+    </section>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Pure <span>Performance</span></h1>
-      <p>Experience software engineering redefined. Where precision meets innovation, 
-      delivering uncompromising excellence in every line of code.</p>
-      <div class="buttons">
-        <a href="#" class="btn primary">Experience DBW →</a>
-        <a href="#" class="btn secondary">Watch Demo</a>
+    <!-- Video -->
+    <section class="hero">
+      <h2>Unser Video</h2>
+      <iframe width="800" height="450"
+              src="https://www.youtube.com/embed/ubhSI3ekP5k?rel=0"
+              frameborder="0"
+              allow="autoplay; encrypted-media; picture-in-picture"
+              allowfullscreen
+              style="max-width:100%;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.15)">
+      </iframe>
+    </section>
+
+    <!-- Über uns -->
+    <section id="about">
+      <h2>Über uns</h2>
+      <p>Wir bei DBW – Deutsche Bewertungswerke – haben eine Software entwickelt, die es Betrieben leicht macht, zufriedene Kunden
+      nach einer Bewertung zu fragen. Über automatisierte Umfragen gelangen Kunden direkt zu Ihrem Google Maps Profil
+      und können mit einem Klick eine 5-Sterne-Bewertung hinterlassen. So steigern Sie Ihr Vertrauen und Ihre Sichtbarkeit online.</p>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen">
+      <h2>Unsere Leistungen</h2>
+      <div class="card">
+        <h3>Kundenumfragen</h3>
+        <p>Einfacher Versand via Link oder QR-Code nach jedem Kauf oder Besuch.</p>
       </div>
-    </div>
-  </section>
+      <div class="card">
+        <h3>Automatische Erinnerungen</h3>
+        <p>Erhöhen Sie die Rücklaufquote mit intelligenten Erinnerungsfunktionen.</p>
+      </div>
+      <div class="card">
+        <h3>Google Maps Integration</h3>
+        <p>Direkte Weiterleitung zufriedener Kunden auf Ihr Profil bei Google.</p>
+      </div>
+      <div class="card">
+        <h3>Dashboard</h3>
+        <p>Volle Transparenz über eingegangene Bewertungen und Feedback.</p>
+      </div>
+    </section>
 
-  <!-- SECTION 2 -->
-  <section class="black-section">
-    <h2>Ready to Experience <span>Perfection?</span></h2>
-    <p>Join thousands of professionals who have elevated their workflow with DBW. 
-    The future of software is here.</p>
-    <div class="buttons">
-      <a href="#" class="btn primary">Start Free Trial</a>
-      <a href="#" class="btn secondary">Schedule Demo</a>
-    </div>
-  </section>
+    <!-- Bewertungen -->
+    <section id="bewertungen">
+      <h2>Erfolgsgeschichten</h2>
+      <p>So profitieren unsere Kunden:</p>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/5_stars.svg/1200px-5_stars.svg.png" alt="5 Sterne" style="max-width:200px">
+        <p>"Seit wir DBW nutzen, haben wir über 100 neue Bewertungen gesammelt – unser Umsatz ist gestiegen!"</p>
+      </div>
+    </section>
 
-  <!-- SECTION 3 -->
-  <section class="white-section">
-    <h2>Performance</h2>
-    <p>Optimized for speed and efficiency at every level.</p>
-    <h2>Innovation</h2>
-    <p>Cutting-edge technology that pushes boundaries.</p>
-  </section>
+    <!-- Abo -->
+    <section id="abo" class="card">
+      <h2>Abo-Modell</h2>
+      <p>Nutzen Sie alle Funktionen für nur <strong>25 € pro Monat</strong>. Keine versteckten Kosten, monatlich kündbar.</p>
+      <form onsubmit="return subscribe(event)">
+        <input type="text" id="name" placeholder="Ihr Name" required>
+        <input type="text" id="firma" placeholder="Ihre Firma" required>
+        <input type="email" id="email" placeholder="Ihre E-Mail" required>
+        <button type="submit">Jetzt anmelden</button>
+      </form>
+      <p id="status" style="margin-top:10px;color:var(--muted)"></p>
+    </section>
 
-  <!-- SECTION 4 -->
-  <section class="black-section">
-    <h2>Engineered for <span>Excellence</span></h2>
-    <p>Every algorithm optimized. Every interface perfected. DBW represents the 
-    pinnacle of software craftsmanship.</p>
-    <ul>
-      <li>Microsecond-level response times</li>
-      <li>Zero-compromise security architecture</li>
-      <li>Intuitive design language</li>
-    </ul>
-    <div class="interface-preview">DBW Interface Preview</div>
-  </section>
+    <!-- Kontakt -->
+    <section id="kontakt" class="card">
+      <h2>Kontakt</h2>
+      <p>Sie können uns direkt per E-Mail erreichen:</p>
+      <a href="mailto:dbw.kontakt@gmail.com"
+         style="display:inline-block;padding:12px 20px;background:#111;color:#fff;border-radius:5px;text-decoration:none;">
+         E-Mail senden
+      </a>
+      <p style="margin-top:10px;color:var(--muted);font-size:0.9rem">
+        Oder schreiben Sie uns direkt an: <a href="mailto:dbw.kontakt@gmail.com">dbw.kontakt@gmail.com</a>
+      </p>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+      © <span id="year"></span> DBW – Deutsche Bewertungswerke · Impressum · Datenschutz
+    </footer>
+  </div>
 
-  <!-- FOOTER -->
-  <footer>
-   <div class="footer-logo">
-  <img src="logo-white.png" alt="logo-white.png">
-</div>
-    <nav>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-      <a href="#">Support</a>
-    </nav>
-    <p>© 2025 DBW. Crafted with precision.</p>
-  </footer>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function subscribe(e){
+      e.preventDefault();
+      document.getElementById('status').textContent = "Danke! Ihre Anmeldung (Demo) wurde übermittelt.";
+      e.target.reset();
+      return false;
+    }
+  </script>
 </body>
 </html>
