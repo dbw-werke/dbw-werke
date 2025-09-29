@@ -27,7 +27,7 @@ body {
 .logo img,
 .footer-logo img {
   height: 50px;   /* passt die Höhe an */
-  width: auto;    /* behält Proportionen */
+  width: 50px;    /* behält Proportionen */
 }
 
 }
@@ -142,5 +142,6 @@ footer p {
   font-size: 12px;
   color: #666;
 }
+
 
 
