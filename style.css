@@ -5,6 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DBW</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Fixierte Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.9); /* dunkler Hintergrund mit leichter Transparenz */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+      border-bottom: 2px solid #fff; /* der Strich unten */
+    }
+
+    .navbar img {
+      height: 40px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #ff4c29; /* Akzentfarbe beim Hover */
+    }
+
+    /* Damit der Inhalt nicht hinter die Navbar rutscht */
+    body {
+      margin: 0;
+    }
+    main, section {
+      padding-top: 100px; /* Abstand für fixierte Navbar */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo-white.png" alt="DBW Logo">
+    </div> 
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="#">Demo</a>
+      <a href="#">Support</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero fade-scroll">
+    <div class="hero-content">
+      <h1>Pure <span>Performance</span></h1>
+      <p>Experience software engineering redefined. Where precision meets innovation, 
+      delivering uncompromising excellence in every line of code.</p>
+      <div class="buttons">
+        <a href="#" class="btn primary">Experience DBW →</a>
+        <a href="#" class="btn secondary">Watch Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section class="black-section fade-scroll">
+    <h2>Ready to Experience <span>Perfection?</span></h2>
+    <p>Join thousands of professionals who have elevated their workflow with DBW. 
+    The future of software is here.</p>
+    <div class="buttons">
+      <a href="#" class="btn primary">Start Free Trial</a>
+      <a href="#" class="btn secondary">Schedule Demo</a>
+    </div>
+
+    <!-- Perfektion Bild -->
+    <div class="image-container">
+      <img src="perfektion.png" alt="Perfektion Beispiel">
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section class="white-section fade-scroll">
+    <h2>Performance</h2>
+    <p>Optimized for speed and efficiency at every level.</p>
+    <h2>Innovation</h2>
+    <p>Cutting-edge technology that pushes boundaries.</p>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section class="black-section fade-scroll">
+    <h2>Engineered for <span>Excellence</span></h2>
+    <p>Every algorithm optimized. Every interface perfected. DBW represents the 
+    pinnacle of software craftsmanship.</p>
+    <ul>
+      <li>Microsecond-level response times</li>
+      <li>Zero-compromise security architecture</li>
+      <li>Intuitive design language</li>
+    </ul>
+    <div class="interface-preview">DBW Interface Preview</div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="logo-white.png" alt="DBW Logo">
+    </div>
+    <nav>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support</a>
+    </nav>
+    <p>© 2025 DBW. Crafted with precision.</p>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DBW</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Fixierte Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.9); /* dunkler Hintergrund mit leichter Transparenz */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 1000;
+      border-bottom: 2px solid #fff; /* der Strich unten */
+    }
+
+    .navbar img {
+      height: 40px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #ff4c29; /* Akzentfarbe beim Hover */
+    }
+
+    /* Damit der Inhalt nicht hinter die Navbar rutscht */
+    body {
+      margin: 0;
+    }
+    main, section {
+      padding-top: 100px; /* Abstand für fixierte Navbar */
+    }
+  </style>
 </head>
 <body>
 
