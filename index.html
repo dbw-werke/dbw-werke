@@ -6,13 +6,20 @@
   <title>DBW</title>
 
   <style>
-    /* --- Fixierte Navbar --- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+    }
+
+    /* Navbar */
     .navbar {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0,0,0,0.9);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -20,11 +27,6 @@
       z-index: 1000;
       border-bottom: 2px solid #fff;
       transition: box-shadow 0.3s ease;
-    }
-
-    /* Schatten beim Scrollen */
-    .navbar.scrolled {
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
     }
 
     .navbar img {
@@ -43,23 +45,92 @@
       color: #ff4c29;
     }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
+    .navbar.scrolled {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 60px 20px; /* Abstand wegen Navbar */
+      background: url("hero-bg.jpg") no-repeat center center/cover;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero span {
+      color: #ff4c29;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 5px;
+      transition: all 0.3s;
+    }
+
+    .btn.primary {
+      background: #ff4c29;
       color: white;
     }
 
-    /* Damit der Content nicht unter die Navbar rutscht */
-    section, footer {
+    .btn.primary:hover {
+      background: #e63e20;
+    }
+
+    .btn.secondary {
+      border: 2px solid #ff4c29;
+      color: #ff4c29;
+    }
+
+    .btn.secondary:hover {
+      background: #ff4c29;
+      color: white;
+    }
+
+    /* Sections */
+    .black-section {
+      background: #111;
       padding: 120px 30px 60px 30px;
       min-height: 100vh;
     }
 
+    .white-section {
+      background: #fff;
+      color: #111;
+      padding: 120px 30px 60px 30px;
+      min-height: 100vh;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       background: #000;
       border-top: 2px solid #fff;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: #ff4c29;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -77,9 +148,9 @@
     </nav>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero fade-scroll">
-    <div class="hero-content">
+  <!-- HERO -->
+  <section class="hero">
+    <div>
       <h1>Pure <span>Performance</span></h1>
       <p>Experience software engineering redefined. Where precision meets innovation, 
       delivering uncompromising excellence in every line of code.</p>
@@ -91,7 +162,7 @@
   </section>
 
   <!-- SECTION 2 -->
-  <section class="black-section fade-scroll">
+  <section class="black-section">
     <h2>Ready to Experience <span>Perfection?</span></h2>
     <p>Join thousands of professionals who have elevated their workflow with DBW. 
     The future of software is here.</p>
@@ -99,39 +170,22 @@
       <a href="#" class="btn primary">Start Free Trial</a>
       <a href="#" class="btn secondary">Schedule Demo</a>
     </div>
-
-    <!-- Perfektion Bild -->
     <div class="image-container">
-      <img src="perfektion.png" alt="Perfektion Beispiel">
+      <img src="perfektion.png" alt="Perfektion Beispiel" style="max-width:100%;margin-top:20px;">
     </div>
   </section>
 
   <!-- SECTION 3 -->
-  <section class="white-section fade-scroll">
+  <section class="white-section">
     <h2>Performance</h2>
     <p>Optimized for speed and efficiency at every level.</p>
     <h2>Innovation</h2>
     <p>Cutting-edge technology that pushes boundaries.</p>
   </section>
 
-  <!-- SECTION 4 -->
-  <section class="black-section fade-scroll">
-    <h2>Engineered for <span>Excellence</span></h2>
-    <p>Every algorithm optimized. Every interface perfected. DBW represents the 
-    pinnacle of software craftsmanship.</p>
-    <ul>
-      <li>Microsecond-level response times</li>
-      <li>Zero-compromise security architecture</li>
-      <li>Intuitive design language</li>
-    </ul>
-    <div class="interface-preview">DBW Interface Preview</div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">
-      <img src="logo-white.png" alt="DBW Logo">
-    </div>
+    <img src="logo-white.png" alt="DBW Logo" style="height:40px;"><br><br>
     <nav>
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
@@ -140,7 +194,7 @@
     <p>© 2025 DBW. Crafted with precision.</p>
   </footer>
 
-  <!-- JS für Navbar-Schatten beim Scrollen -->
+  <!-- JS für Scroll-Schatten -->
   <script>
     window.addEventListener("scroll", function() {
       const navbar = document.querySelector(".navbar");
