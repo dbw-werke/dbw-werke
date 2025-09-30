@@ -27,8 +27,8 @@ header {
   top:0;
   left:0;
   width:100%;
-  background:rgba(17,17,17,0.6); /* halb durchsichtig schwarz */
-  backdrop-filter:blur(10px); /* verschwommen dahinter */
+  background:rgba(17,17,17,0.6);
+  backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
   color:#fff;
   display:flex;
@@ -72,6 +72,69 @@ p {
   border-radius:var(--radius);
   box-shadow:0 4px 14px rgba(0,0,0,0.08);
   margin-top:20px;
+}
+
+/* Schwarze & Weiße Abschnitte */
+.section-black {
+  background:#000;
+  color:#fff;
+  padding:80px 20px;
+}
+.section-white {
+  background:#fff;
+  color:#111;
+  padding:80px 20px;
+}
+
+/* Flex Layout für ersten Abschnitt */
+.flex-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+.flex-row .text { flex:1; }
+.flex-row .video {
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+/* Video Preview */
+.video-preview {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  max-width: 100%;
+}
+.video-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.play-button {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  width:70px;
+  height:70px;
+  background:rgba(255,255,255,0.85);
+  border-radius:50%;
+  box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+.play-button::after {
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-40%,-50%);
+  border-left:20px solid #e60023;
+  border-top:12px solid transparent;
+  border-bottom:12px solid transparent;
 }
 
 /* Schwarze Spalten */
@@ -130,7 +193,7 @@ footer {
 /* Responsive Design – Handy & Tablet */
 @media (max-width: 768px) {
   header {
-    flex-direction: row;    /* Logo links, Menü rechts */
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding:10px 15px;
@@ -138,16 +201,16 @@ footer {
 
   nav {
     display:flex;
-    flex-direction: row;       /* Menü nebeneinander */
-    justify-content: flex-end; /* nach rechts ausrichten */
-    flex-wrap: wrap;           /* wenn zu wenig Platz → umbrechen */
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
     width:auto;
     margin-top:0;
   }
 
   nav a {
-    margin:0 8px;              /* kleine Abstände */
-    flex:unset;                /* gleiche Breite aufheben */
+    margin:0 8px;
+    flex:unset;
     text-align:center;
   }
 
@@ -155,4 +218,13 @@ footer {
   .row { flex-direction: column; }
   .hero { padding:40px 10px; }
   iframe { width:100% !important; height:auto; }
+
+  .flex-row { flex-direction:column; }
+  .flex-row .text, .flex-row .video { flex:none; width:100%; }
+}
+
+@media (max-width: 500px) {
+  h1 { font-size:1.6rem; }
+  h2 { font-size:1.3rem; }
+  section { margin:30px 0; }
 }
