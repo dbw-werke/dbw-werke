@@ -276,5 +276,26 @@ footer {
   h2 { font-size:1.3rem; }
   section { margin:30px 0; }
 }
+.floating-btn {
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  background:#111;              /* gleiche Farbe wie dein Stil */
+  color:#fff;
+  padding:14px 22px;
+  border-radius: var(--radius);
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 6px 20px rgba(0,0,0,0.25);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+  z-index:10000; /* über allem */
+}
+
+.floating-btn:hover {
+  transform:scale(1.08);
+  box-shadow:0 8px 28px rgba(0,0,0,0.35);
+}
+
+
 
 
