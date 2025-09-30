@@ -84,6 +84,31 @@ p {
   box-shadow:0 4px 14px rgba(0,0,0,0.08);
   margin-top:20px;
 }
+.testimonial {
+  display:flex;
+  align-items:center;
+  gap:15px;
+  background:#f9f9f9;
+  padding:20px;
+  border-radius:var(--radius);
+  box-shadow:0 4px 14px rgba(0,0,0,0.08);
+  margin-top:20px;
+}
+
+.testimonial img {
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:50%; /* macht das Bild rund */
+  flex-shrink:0;
+}
+
+.testimonial p {
+  margin:0;
+  font-size:1rem;
+  color:var(--text);
+}
+
 .light-card {
   background:#fff; /* helle Karten für schwarze Abschnitte */
   color:#111;
@@ -251,4 +276,5 @@ footer {
   h2 { font-size:1.3rem; }
   section { margin:30px 0; }
 }
+
 
