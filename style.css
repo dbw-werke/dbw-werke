@@ -94,6 +94,8 @@ p {
   background:linear-gradient(180deg, #000 0%, #111 100%);
   color:#fff;
   padding:80px 20px;
+  border-radius: var(--radius);   /* hier neu einfügen */
+  overflow: hidden;               /* sorgt dafür, dass nix übersteht */
 }
 .section-white {
   background:#fff;
@@ -249,3 +251,4 @@ footer {
   h2 { font-size:1.3rem; }
   section { margin:30px 0; }
 }
+
