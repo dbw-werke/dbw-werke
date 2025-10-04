@@ -312,3 +312,67 @@ footer {
   transform:scale(1.05);
   box-shadow:0 6px 20px rgba(0,0,0,0.25);
 }
+/* ===== FAQ (scoped) ===== */
+#faq {
+  /* bleibt weiß wie deine anderen weißen Sektionen */
+  background:#fff;
+  color:#111;
+  padding:80px 20px;
+}
+
+#faq h2 {
+  text-align:center;
+  margin-bottom:40px;
+  font-weight:600;
+}
+
+#faq .faq-grid {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:16px;
+}
+
+/* ab Tablet/Desk zwei Spalten, ohne den Rest zu beeinflussen */
+@media (min-width: 900px) {
+  #faq .faq-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+/* Bubble-Stil – an deine Cards angelehnt */
+#faq .faq-bubble {
+  background:#f9f9f9;
+  border:1px solid #eee;
+  border-radius:var(--radius);
+  padding:20px;
+}
+
+/* Kopfzeile: kleines schwarzes Icon links + Frage */
+#faq .faq-head {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+
+#faq .faq-icon {
+  width:18px; height:18px;
+  line-height:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#111;          /* schwarz */
+  flex:0 0 18px;
+  user-select:none;
+}
+
+#faq h3 {
+  /* keine Größe setzen -> übernimmt deine bestehenden h3-Styles */
+  margin:0;            /* sauberer Ausgleich im Head */
+}
+
+#faq p {
+  /* gleiche Typo wie sonst */
+  color:var(--muted);
+  margin:0;
+}
+
+
