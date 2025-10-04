@@ -229,6 +229,14 @@
       document.getElementById('ytplayer').src =
         "https://www.youtube.com/embed/ubhSI3ekP5k?autoplay=1&rel=0&modestbranding=1";
     }
+
+   // 🔽 FAQ interaktiv
+document.querySelectorAll('#faq .faq-item').forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+
   </script>
 </body>
 </html>
