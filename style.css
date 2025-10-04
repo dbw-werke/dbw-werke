@@ -208,58 +208,35 @@
   </script>
 </body>
 </html>
-/* FAQ-Bereich */
+/* FAQ (einfacher Stil, wie restliche Abschnitte) */
 #faq {
-  text-align: center;
   padding: 80px 20px;
-  background: linear-gradient(180deg, #000 0%, #111 100%);
-  color: #fff;
-  border-radius: var(--radius);
+  background: #fff;
+  color: #111;
 }
 
 #faq h2 {
-  font-size: 2rem;
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  justify-items: center;
+.faq-item {
+  margin-bottom: 30px;
+  border-left: 4px solid #111;
+  padding-left: 15px;
 }
 
-.faq-bubble {
-  background: #1a1a1a;
-  border: 1px solid #333;
-  border-radius: 25px;
-  padding: 25px;
-  text-align: left;
-  max-width: 500px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.faq-bubble:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(255,255,255,0.1);
-}
-
-.faq-icon {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.faq-bubble h3 {
+.faq-item h3 {
   font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #fff;
+  margin-bottom: 8px;
 }
 
-.faq-bubble p {
-  color: #ccc;
-  font-size: 0.95rem;
+.faq-item p {
+  font-size: 1rem;
+  color: var(--muted);
   line-height: 1.5;
 }
+
 
 
