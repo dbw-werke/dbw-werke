@@ -212,13 +212,16 @@
     <section id="abo" class="section-black card hidden">
       <h2>Abo-Modell</h2>
       <p>Testen Sie unsere Software 1 Monat kostenlos.Nutzen Sie dannach alle Funktionen für nur <strong>25 € pro Monat</strong>. Keine versteckten Kosten, monatlich kündbar.</p>
-      <form onsubmit="return subscribe(event)">
-        <input type="text" id="name" placeholder="Ihr Name" required>
-        <input type="text" id="firma" placeholder="Ihre Firma" required>
-        <input type="email" id="email" placeholder="Ihre E-Mail" required>
-        <button type="submit">Jetzt anmelden</button>
-      </form>
-      <p id="status" style="margin-top:10px;color:var(--muted)"></p>
+      <!-- Stripe-Abo-Button -->
+<div style="text-align:center;margin-top:20px;">
+  <a href="https://buy.stripe.com/test_4gMfZjBrDekj1ow7H0fI01" target="_blank" style="text-decoration:none;">
+    <button style="background:#00c853; color:#fff; padding:14px 28px; font-size:17px; border:none; border-radius:8px; cursor:pointer; transition:0.3s;">
+      Jetzt 30 Tage kostenlos testen
+    </button>
+  </a>
+  <p style="margin-top:12px;color:#bbb;font-size:0.9rem;">Erster Monat kostenlos · Danach 25 €/Monat · Jederzeit kündbar</p>
+</div>
+
     </section>
 
     <!-- Kontakt -->
